@@ -60,11 +60,11 @@ const [task, setTask] = useState([])
         />
         <button className='px-5 py-2 w-full bg-white font-medium text-black rounded outline-none active:scale-95'>Add Note</button>
       </form>
-      <div className='p-10 lg:border-l-2 lg:w-1/2'>
+      <div className='p-10 lg:border-l-2 lg:w-1/2 bg-black'>
       <h1 className='text-3xl font-bold'>Recent Notes</h1>
-      <div className='flex flex-wrap gap-5 mt-10 overflow-auto h-[90%]'>
+      <div className='grid grid-cols-2 lg:grid-cols-3 gap-5 mt-10 overflow-auto h-[90%] '>
         {task.map((elem,idx)=>{
-          return <div  className='relative flex flex-col justify-between items-start bg-black text-black w-40 h-52 py-8 px-4 rounded bg-cover bg-[url(https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png)]'>
+          return <div  className='relative flex flex-col justify-between items-start md:items-center bg-black text-black h-52 py-8 px-4 rounded bg-cover bg-[url(https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png)]'>
             <div className='overflow-y-hidden max-h-32'>
               <h1 className='leading-tight text-lg font-bold break-word'>{elem.title}</h1>
             <p className='mt-2 leading-tight font-medium text-gray-500 text-xsm '>{elem.details}</p>
